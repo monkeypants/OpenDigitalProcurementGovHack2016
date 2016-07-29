@@ -45,3 +45,9 @@ texinfo_documents = [
      author, handle, description,
      'Miscellaneous'),
 ]
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+    ]
+}
