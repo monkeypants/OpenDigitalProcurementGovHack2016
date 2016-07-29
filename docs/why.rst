@@ -17,10 +17,11 @@ The national productivity benefits promised by a national eInvoicing system come
 
 The problems with existing <todo: refs>  eInvoicing standards is that they rely on a network of implicitly trusted gateways, which rely on secrecy and paperwork to provide permiter security.
 
-We believe the fundamental value of eInvoicing is the liquidity it provides, This axiom leads to principles that can maximise the national productivity benefits of eInvoicing:
+We believe the fundamental value of eInvoicing is the liquidity it provides,
+
+This axiom leads to a set of principles that can maximise the national productivity an eInvoicing scheme can achieve:
  * maximise liquidity by pushing trust and sophistocation to the edge of the network
- * bridge-trolls are bad; avoid situations that maximise the value of the traffic to the network, seek situations that maximise the value of the network to the traffic
- * maximise the privacy of information and transparency of data at the same time
+ * bridge-trolls are bad; avoid situations that maximise the value of the traffic to the network, seek situations that **maximise the value of the network to the traffic**
 
 This is why we intend to demonstrate key elements of a working eInvoicing system that:
  * links the identity of Australian businesses back to a trusted source, even in a social media context
@@ -28,4 +29,4 @@ This is why we intend to demonstrate key elements of a working eInvoicing system
  * usees blockchain ledger to make gateways accountable for preventing collusion,
  * shows how a smart eInvoicing protocol design can recude the cost of finance to Australian businesses, more than doubling the projected national productivity dividend currently anticipated by eInvoicing proponents.
 
-On the way, we will demonstrate how strategic mistrust can be used to improve liquidity, and how information can be private while data is (usefully) open.
+On the way, we will demonstrate how strategic mistrust can enhance liquidity, and how businesses can control the flow of information (selective revelation) through untrusted open data.

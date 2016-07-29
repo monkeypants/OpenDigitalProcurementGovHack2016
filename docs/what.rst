@@ -16,3 +16,6 @@ state model of invoice processing in the real world
 
 Realistic eInvoicing protocol: the Alice, Bob and Charles story
 
+show how Charles can verify private messages using public data using crypto protocols
+
+show how Financial Software can verify gateway behavior using blockchain
