@@ -29,4 +29,4 @@ This is why we intend to demonstrate key elements of a working eInvoicing system
  * usees blockchain ledger to make gateways accountable for preventing collusion,
  * shows how a smart eInvoicing protocol design can recude the cost of finance to Australian businesses, more than doubling the projected national productivity dividend currently anticipated by eInvoicing proponents.
 
-On the way, we will demonstrate how strategic mistrust can enhance liquidity, and how businesses can control the flow of information (selective revelation) through untrusted open data.
+On the way, we will demonstrate how the magic sword of mistrust can slay rent-seeking bridge-trolls, and how Australian businesses could use cryptographic protocls and the blockchain to control the flow of private information across a public, open data network.
