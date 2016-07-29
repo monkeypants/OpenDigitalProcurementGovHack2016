@@ -1,0 +1,31 @@
+Using blockchains to eliminate trust from eInvoicing gateways
+=============================================================
+
+
+Two things that are so hot right now:
+ * eInvoicing, because of potential national productivity benefits
+ * blockchains, because society stopped implicitly trusting banks
+
+Relevant public data / APIs
+ * ABR, reliable list of all Australian businesses
+ * simulated OIDC Identity Provider for authenticating Australian Businesses (and providing consent-based authorisation) that leverages existing Commonwealth capability
+
+The national productivity benefits promised by a national eInvoicing system come from:
+ * reducing buyer and seller costs associated with invoice processing
+ * improving accountability and counter-party trust
+ * new digital oportunities for value-creation
+
+The problems with existing <todo: refs>  eInvoicing standards is that they rely on a network of implicitly trusted gateways, which rely on secrecy and paperwork to provide permiter security.
+
+We believe the fundamental value of eInvoicing is the liquidity it provides, This axiom leads to principles that can maximise the national productivity benefits of eInvoicing:
+ * maximise liquidity by pushing trust and sophistocation to the edge of the network
+ * bridge-trolls are bad; avoid situations that maximise the value of the traffic to the network, seek situations that maximise the value of the network to the traffic
+ * maximise the privacy of information and transparency of data at the same time
+
+This is why we intend to demonstrate key elements of a working eInvoicing system that:
+ * links the identity of Australian businesses back to a trusted source, even in a social media context
+ * replacees complex infrastructure with a simple transport layer using cryprographic protocols
+ * usees blockchain ledger to make gateways accountable for preventing collusion,
+ * shows how a smart eInvoicing protocol design can recude the cost of finance to Australian businesses, more than doubling the projected national productivity dividend currently anticipated by eInvoicing proponents.
+
+On the way, we will demonstrate how strategic mistrust can be used to improve liquidity, and how information can be private while data is (usefully) open.
