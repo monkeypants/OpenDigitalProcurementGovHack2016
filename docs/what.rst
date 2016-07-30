@@ -11,8 +11,8 @@ explain how privacy requirements are the inverse of trust.
 Simplistic eInvoicing protocol; the Alice and Bob story
 
 state model of invoice processing in the real world
- * big business version
- * small business version
+ * best practice version
+ * minimum viable version
 
 Realistic eInvoicing protocol: the Alice, Bob and Charles story. unpack this story: https://github.com/ausdigital/RESTful-framework/issues/6
 
