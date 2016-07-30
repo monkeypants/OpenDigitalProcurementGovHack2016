@@ -14,7 +14,7 @@ state model of invoice processing in the real world
  * big business version
  * small business version
 
-Realistic eInvoicing protocol: the Alice, Bob and Charles story
+Realistic eInvoicing protocol: the Alice, Bob and Charles story. unpack this story: https://github.com/ausdigital/RESTful-framework/issues/6
 
 show how Charles can verify private messages using public data using crypto protocols
 
