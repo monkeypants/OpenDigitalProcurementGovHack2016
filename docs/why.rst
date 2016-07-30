@@ -1,6 +1,7 @@
 Using blockchains to eliminate trust from eInvoicing gateways
 =============================================================
 
+This stuff is in our repo here https://github.com/monkeypants/slays_the_bridge_trolls
 
 Two things that are so hot right now:
  * eInvoicing, because of potential national productivity benefits
