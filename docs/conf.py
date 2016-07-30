@@ -2,7 +2,6 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.graphviz',
-    'sphinxcontrib.httpdomain',
 ]
 templates_path = ['_templates']
 source_suffix = '.rst'
