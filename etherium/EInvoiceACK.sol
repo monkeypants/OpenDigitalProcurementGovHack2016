@@ -27,7 +27,7 @@ contract EInvoiceACK {
             gw_datetime: gw_datetime,
             post_datetime: post_datetime
         });        
-        return tx.origin;
+        return this;
     }
     
     function getAckPayloadHash() returns (string) {
