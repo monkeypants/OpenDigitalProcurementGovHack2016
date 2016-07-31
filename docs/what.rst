@@ -1,21 +1,33 @@
 What
 ====
 
-trust zone diagram
- * full trust (Business Users - Finaicial Software)
- * limited trust (Financial Software - Gateways)
- * zero trust (Gateway - Gateway)
+Invoices are the bills that businesses transmit from supplier to buyer, requesting payment for goods or services delivered.
 
-explain how privacy requirements are the inverse of trust.
+Unlike many business financial statements, invoices do not follow a universally agreement format. Also the terms of payment for invoices differ from organisation to organisation and are usually negotiated in a corresponding business contract. This variability has made the automation of procurement processes in the supply chain difficult. In fact, according to an Ardent Partners survey of over 300 organisations, in the US in 2014, 72% of business procurement processes are still manual!
 
-Simplistic eInvoicing protocol; the Alice and Bob story
+So what? Manual invoicing creates inertia that prevents GDP growth and stiflesinnovation. According to the RBA, Australian SME business secured $240bn offinancing that enabled growth. However, only about half of that funding came from banks, 5% of all home mortgages where raised to fund SME businesses, and personal credit card debt also makes up a significant contribution overall. Finally the Australian Digital Business Council commission a report (Billentis 2015) that conservatively estimated that high penetration of e-invoicing could save government up to $3bn a year.
 
-state model of invoice processing in the real world
- * best practice version
- * minimum viable version
 
-Realistic eInvoicing protocol: the Alice, Bob and Charles story. unpack this story: https://github.com/ausdigital/RESTful-framework/issues/6
+Creating an electronic invoice environment; The trust zone vs privacy zone
+--------------------------------------------------------------------------
 
-show how Charles can verify private messages using public data using crypto protocols
+Invoices are not considered reliable sources of transaction information. Consequently it can take more than 25 days to verify basic origination details, line items, receipt and acceptance of mentioned items, accuracy of billing details and approve for pay. Much of this lost time occurs in the transmission, receipt and logging of the invoice. A standardized e-invoicing framework can overcome this issue. There are a number of approaches that can be utilized, each with pros and cons. The Digital Business Council proposes a ‘four corner’ gateway model, based on the EU PEPPOL project design nearly a decade ago.
 
-show how Financial Software can verify gateway behavior using blockchain
+Our proposed approach is different. We propose a peer-to- per approach because the team believes that advances in technology and detailed understanding of the Australian procurement environment enables further benefits with this model. For example we believe that additional messaging and processing status information would make for a platform of new, not before delivered business innovation and processes. This could be frictionless trade efficiencies, development of inter-company supply chains not possible before, or development of new innovative financial services. We have chosen to describe a scenario for a new implementation of Trade Financing in a story that follows. To enable the exchange of any documents we needed initially to develop a model of how to manage trust and assure information authenticity and accuracy as the basis of our approach. We developed the trust zone model below to achieve this end:
+
+[insert image]
+
+Within the boundaries of Alice and Bob’s organisation’s all information is trusted all the time. But they don’t have the data about each other to complete the trade. The information in the form of an invoice is prepared through Alice’s financial systems for transport to Bob. Once it exits her FS, it enters the low trust zone. Here it is external to the organizational boundaries and the information is vulnerable. Therefore the information must be encrypted to protect Alice. The data associated is used to process transport. The document is routed to the Gateway. Here the invoice enters the no trust zone. Basically the only readable information to proceed must be the routing and unique identifier information for the trading parties and the document, to protect from attack. In the no trust zone the information is completely private and the date is completely open. The Gateway looks up Bob’s endpoint gateway and transports to his associated gateway. At the second Gateway, Bob’s location is looked up and the invoice send to the endpoint for assimilation by his organisations’ financial systems.
+
+Charles is a trade-financing provider. Alice has an average of 60 days from acceptance of the invoice to payment. As her business is rapidly growing her cash flow gap is growing. Charles wants to provide a cash flow solution at a reasonable cost. In a manual scenario it would take 2-6 weeks for Charles to onboard Alice as a finance customer. However with a direct API link to her FS, he can interrogate with full trust the invoice information. Combined with intercepting the messages acknowledging receipt and stages of invoice processing, Charles can onboard instantaneously and Alice can grow her business faster using finance. Because there is better information quality available and improved risk assessment possible, the cost of finance will be lower.
+
+**Turning chaotic procurement communication into financial grade information** The challenges of the Alice, Bob, and Charles tale are twofold:
+
+1) How does Charles establish that the invoice under consideration for financing is real? There are many examples of fake invoices being offered for sale.
+ 2) Once authenticity is established, how can Charles then validate the line items correspond to actual delivered goods and services without deviation? This is arguably a more difficult problem as many circumstances outside the invoice can alter the amount due. For example, the customer may only have received partial delivery, or a proportion of the goods may have been faulty, requiring withholding of partial payment. Or this delivery may cross a contract volume break reducing per item price that is not reflected in the invoice.
+
+To answer both questions without incurring manual and cumbersome effort by the lender on each invoice, we must pivot our view from one of finance understanding to procurement. The procurement and corresponding account payable departments deal with answering these questions every day for every invoice. Our peer-to- peer open framework for e-invoicing can 1) permeate many industries at some scale to reduce the number of FTE’s in both trading organisations required to process invoices, and 2) include any messaging associated with corresponding transaction documents useful for proving value and status, for example, PO and delivery notes. We model various invoice processes flow for fine-grained information regarding the status from the buyer system. Many supply chains have a degree of AP/AR automation across closed procurement networks. This automation produces all the information and intelligence required to 1) verify an invoice is authentic, and 2) validate that the line items are accurate, up to date and reflect the actual amount due. Our peer-to-peer solution links up these islands of automation on a national scale and extends the benefits to all.
+
+Best practice can be achieved; invoices are matched with all relevant procurement information relating to that invoice establishing the facts of what remittance is due when. A commonly accepted and robust process implemented through our model is 3-way matching. This is where the details of the invoice are checked against the Purchase order issued by the buyer and the contract agreed between the trading parties to validate that the line item detail is correct. We also support simplifies flows found in smaller business scenarios. 
+
+An ideal implementation would includes a distributed Ledger to record and securely store all information required to establish the authenticity, validate value, and understand the processing status of the invoice. We used a block chain platform (Ethereum), to create to prove the concept with a single transaction within the protocol (Buyer invoice acknowledgment. The blockchain ledger removes the need for gateways not to tamper with the record traffic across the network and then becomes an innovation platform for Bob, Charles and Alice. With trust in the blockchain data for use by all parties, new imaginative processes and services can be designed.
