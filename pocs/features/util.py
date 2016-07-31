@@ -1,12 +1,14 @@
 from lettuce import *
 import time
+import requests
+from selenium.webdriver import Firefox
 
+world.browser = Firefox()
 
 @step(u'foo')
 def given_foo(step):
     # TODO
     fastwait()
-
 
 #
 # mock domain model
@@ -19,8 +21,11 @@ class EncryptedEInvoice(object):
 #
 # control the speed of the demo
 #
-def wait():
-    time.sleep(0.04)
+def wait(pause=None):
+    if not pause:
+        pause=0.4
+    time.sleep(pause)
 
 def fastwait():
-    time.sleep(0.05)
+    wait(0.1)
+

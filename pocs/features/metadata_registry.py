@@ -1,4 +1,12 @@
 from util import *
+from selenium.webdriver import Firefox
+from lettuce import world
+
+world.metadata_base_url = "https://search-metadata-registry-dev-4grl6gf3ctaqvysnxksj5f7aqe.ap-northeast-1.es.amazonaws.com/"
+world.metadata_metadata = "{}heroku_dev_search/_stats?pretty=1".format(world.metadata_base_url)
+world.business_search_url = "{}heroku_dev_search/_stats?pretty=1".format(world.metadata_base_url)
+
+#world.browser.get(world.metadata_metadata)
 
 @step(u'business knows the other has ABN of "([^"]*)"')
 def business_knows_the_other_has_abn_of_foo(step, abn):
@@ -8,12 +16,13 @@ def business_knows_the_other_has_abn_of_foo(step, abn):
 @step(u'And there is an appropriate metadata-registry')
 def there_is_an_appropriate_metadata_registry(step):
     # mock this with ElasticSearch mashup
-    fastwait()
+    world.browser.get(world.metadata_metadata)
 
 @step(u'HTTP GET the ABN URN from the metadata-registry')
 def http_get_the_abn_urn_from_the_metadata_registry(step):
     # lookup the ABN URN using ES
-    fastwait()
+    # TODO - this works, need to show it
+    pass
 
 @step(u'discovers a map of the other parties integration surface')
 def discover_a_map_of_the__integration_surface(step):
@@ -82,3 +91,4 @@ def seller_discovers_that_buyer_is_the_appropriate_gateway_for_name(step, seller
 def the_map_includes_the_einvoice_protocol_endpoint(step):
     # same logic as above, inspect json
     fastwait()
+
