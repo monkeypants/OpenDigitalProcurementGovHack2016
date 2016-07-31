@@ -5,6 +5,8 @@ docs: http://slay-the-bridge-trolls.readthedocs.io/
 
 code: http://github.com/monkeypants/slays_the_bridge_trolls/
 
+presentation video: https://www.youtube.com/watch?v=2twFmDG2j2s
+
 
 Business Metadata
 ^^^^^^^^^^^^^^^^^

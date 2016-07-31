@@ -1,4 +1,4 @@
-This is our submission video: https://www.youtube.com/watch?v=MB-glsYcGXI 
+This is our submission video: https://www.youtube.com/watch?v=2twFmDG2j2s
 
 Our docs are here: http://slay-the-bridge-trolls.readthedocs.io/
 
