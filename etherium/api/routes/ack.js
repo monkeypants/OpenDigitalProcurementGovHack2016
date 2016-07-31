@@ -56,6 +56,24 @@ var codes = {
 *
 */
 
+/**
+ * @api {post} /ack Create ack contract
+ * @apiName PostAck
+ * @apiGroup ACK
+ *
+ * @apiParam {String}   payload_hash          Hashed payload of the invoice
+ * @apiParam {String}   url                   URL to the ack
+ * @apiParam {Number}   code                  Ack State.
+ * @apiParam {Number}   gw_datetime           Gateway datetime
+ *
+ * @apiSuccess {String} address Address of the ack contract.
+ *
+ *
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 200 0x7b49e2c3b3416b66b33b2d77a88d76c073b28a29
+ *
+ */
+
 router.post('/', function(req, res, next) {
 	var ack = req.body;
 	if (!(ack && ack.payload_hash && ack.url && ack.code && ack.gw_datetime)) {
@@ -84,6 +102,33 @@ router.post('/', function(req, res, next) {
 });
 
 
+
+/**
+ * @api {get} /ack/:address Get Ack data
+ * @apiName GetAckData
+ * @apiGroup ACK
+ *
+ *
+ * @apiParam {String}   address           ack contract address
+ *
+ *
+ * @apiSuccess {String}   payload_hash          Hashed payload of the invoice
+ * @apiSuccess {String}   url                   URL to the ack
+ * @apiSuccess {Number}   code                  Ack State.
+ * @apiSuccess {Number}   gw_datetime           Gateway datetime
+ *
+ * @apiSuccess {String} address Address of the ack contract.
+ *
+ *
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 200
+ *   {
+ *		payload_hash : "odihodhodh;odhodhohocnkcich",
+ *		url : "http://govhack.org",
+ *		code : 1,
+ *		gw_datetime : 6963963963
+ *	}
+ */
 router.get('/:address', function (req, res, next) {
 	var address = req.params.address;
 	if (!address) {
@@ -100,6 +145,26 @@ router.get('/:address', function (req, res, next) {
 	});
 })
 
+/**
+ * @api {get} /ack/codes Get invoice state codes
+ * @apiName GetStateCodes
+ * @apiGroup ACK
+ *
+ *
+ * @apiSuccess {Map}   state          code:stateName set
+ *
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 200
+ *{
+ *	1 : 'created',
+ *	2 : 'received',
+ *	3 : 'approved',
+ *	4 : 'disputed',
+ *	5 : 'cancelled',
+ *	6 : 'paid'
+ *}
+ *
+ */
 router.get('/codes', function (req, res, next) {
 	res.send(codes)
 });
