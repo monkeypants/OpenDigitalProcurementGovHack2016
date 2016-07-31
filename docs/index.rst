@@ -6,5 +6,4 @@ Smart eInvoicing
 
    why
    what
-   how
    showthething
