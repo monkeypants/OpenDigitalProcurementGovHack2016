@@ -1,0 +1,8 @@
+{
+  "name": "blockchain-ack",
+  "version": "1.0.0",
+  "description": "Blockchain API Documentation",
+  "title": "Blockchain API Documentation",
+  "url" : "http://ec2-52-63-123-136.ap-southeast-2.compute.amazonaws.com:3000/api",
+  "sampleUrl": "http://ec2-52-63-123-136.ap-southeast-2.compute.amazonaws.com:3000/api"
+}
